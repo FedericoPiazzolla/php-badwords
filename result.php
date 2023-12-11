@@ -1,6 +1,8 @@
 <?php 
-  $paragraph = $GET['paragraph'];
-  $censored_word = $GET['censor'];
+  $paragraph = $_GET['paragraph'];
+  $censored_word = $_GET['censor'];
+
+  $censored_text = str_replace($censored_word, '***', $paragraph);
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +13,14 @@
   <title>Document</title>
 </head>
 <body>
-  
+
+  <h2>Testo originale</h2>
+  <p><?php echo $paragraph; ?></p>
+  <p><strong>La lungheza del tuo testo:</strong> <?php echo strlen($paragraph) ?></p>
+
+  <h2>Testo censurato</h2>
+  <p><?php echo $censored_text; ?></p>
+  <p><strong>La lungheza del tuo testo:</strong> <?php echo strlen($censored_text) ?></p>
+
 </body>
 </html>
