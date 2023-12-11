@@ -1,5 +1,6 @@
 <?php 
-  
+  $paragraph = $GET['paragraph'];
+  $censored_word = $GET['censor'];
 ?>
 
 <!DOCTYPE html>
